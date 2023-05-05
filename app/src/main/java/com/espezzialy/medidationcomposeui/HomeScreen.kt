@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
@@ -15,10 +16,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.espezzialy.medidationcomposeui.ui.theme.ButtonBlue
-import com.espezzialy.medidationcomposeui.ui.theme.DarkerButtonBlue
-import com.espezzialy.medidationcomposeui.ui.theme.DeepBlue
-import com.espezzialy.medidationcomposeui.ui.theme.TextWhite
+import com.espezzialy.medidationcomposeui.ui.theme.*
 
 @Composable
 fun HomeScreen() {
@@ -30,6 +28,7 @@ fun HomeScreen() {
         Column {
             GreetingSection()
             ChipSection(chips = listOf("Sweet Sleep", "Medidation", "Depression", "History", "Self-knowledge"))
+            CurrentMedidation()
         }
     }
 }
@@ -96,6 +95,54 @@ fun ChipSection(
                 Text(text = chips[it], color = TextWhite)
             }
         }
+    }
+}
+
+@Composable
+fun CurrentMedidation(
+    color: Color = LightRed
+) {
+
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween,
+        modifier = Modifier
+            .padding(15.dp)
+            .background(color)
+            .clip(RoundedCornerShape(10.dp))
+            .padding(horizontal = 15.dp, vertical = 20.dp)
+            .fillMaxWidth()
+    ) {
+       Column {
+           Text(
+               text = "Daily Thought",
+               style = MaterialTheme.typography.h2
+           )
+
+           Text(
+               text = "Medidation • 3-10 min",
+               style = MaterialTheme.typography.body1,
+               color = TextWhite
+           )
+       }
+       Box(
+           contentAlignment = Alignment.Center,
+           modifier = Modifier
+               .size(40.dp)
+               .clip(CircleShape)
+               .background(ButtonBlue)
+               .padding(10.dp)
+       ) {
+           Icon(
+               painter = painterResource(id = R.drawable.ic_play),
+               contentDescription = "Play",
+               tint = Color.White,
+               modifier = Modifier.size(16.dp)
+           )
+       }
+
+
+
     }
 
 }
