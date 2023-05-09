@@ -21,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.espezzialy.medidationcomposeui.ui.model.BottomMenuContent
@@ -293,7 +294,7 @@ fun FeatureSection(
         modifier = Modifier.fillMaxWidth()
     ) {
         Text(
-            text = "Features",
+            text = "Featured",
             style = MaterialTheme.typography.h1,
             modifier = Modifier.padding(15.dp)
         )
@@ -384,12 +385,12 @@ fun FeatureItem(
         Box(modifier = Modifier
             .fillMaxSize()
             .padding(15.dp)) {
-            Text(
-                text = feature.title,
-                style = MaterialTheme.typography.h2,
-                lineHeight = 26.sp,
-                modifier = Modifier.align(Alignment.TopStart)
-            )
+                Text(
+                    text = feature.title,
+                    style = MaterialTheme.typography.h2,
+                    lineHeight = 26.sp,
+                    modifier = Modifier.align(Alignment.TopStart)
+                )
 
             Icon(
                 painter = painterResource(id = feature.iconId),

@@ -3,13 +3,10 @@ package com.espezzialy.medidationcomposeui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import com.espezzialy.medidationcomposeui.ui.model.Feature
+import com.espezzialy.medidationcomposeui.ui.theme.LightGreen1
+import com.espezzialy.medidationcomposeui.ui.theme.LightGreen2
+import com.espezzialy.medidationcomposeui.ui.theme.LightGreen3
 import com.espezzialy.medidationcomposeui.ui.theme.MedidationComposeUITheme
 
 class MainActivity : ComponentActivity() {
@@ -17,21 +14,18 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MedidationComposeUITheme {
-                HomeScreen()
+//                HomeScreen()
+                FeatureScreen(
+                    Feature(
+                    title = "Tips for sleeping",
+                    R.drawable.ic_videocam,
+                    LightGreen1,
+                    LightGreen2,
+                    LightGreen3
+                )
+                )
+
             }
         }
     }
 }
-
-//@Composable
-//fun Greeting(name: String) {
-//    Text(text = "Hello $name!")
-//}
-//
-//@Preview(showBackground = true)
-//@Composable
-//fun DefaultPreview() {
-//    MedidationComposeUITheme {
-//        Greeting("Android")
-//    }
-//}

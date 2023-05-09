@@ -25,18 +25,24 @@ val Typography = Typography(
         color = AquaBlue,
         fontFamily = gothicA1,
         fontWeight = FontWeight.Normal,
+        fontSize = 18.sp
+    ),
+    body2 = TextStyle(
+        color = AquaBlue,
+        fontFamily = gothicA1,
+        fontWeight = FontWeight.Normal,
         fontSize = 14.sp
     ),
     h1 = TextStyle(
         color = TextWhite,
         fontFamily = gothicA1,
         fontWeight = FontWeight.Bold,
-        fontSize = 22.sp
+        fontSize = 26.sp
     ),
     h2 = TextStyle(
         color = TextWhite,
         fontFamily = gothicA1,
         fontWeight = FontWeight.Bold,
-        fontSize = 18.sp
+        fontSize = 22.sp
     )
 )
