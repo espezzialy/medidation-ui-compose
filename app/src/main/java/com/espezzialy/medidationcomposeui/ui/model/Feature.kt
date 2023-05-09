@@ -1,4 +1,4 @@
-package com.espezzialy.medidationcomposeui
+package com.espezzialy.medidationcomposeui.ui.model
 
 import androidx.annotation.DrawableRes
 import androidx.compose.ui.graphics.Color
